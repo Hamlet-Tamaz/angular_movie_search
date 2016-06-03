@@ -1,0 +1,24 @@
+#main {
+	text-align: center
+}
+
+#movieList img {
+	height: 140px;
+}
+
+#movieList li {
+	list-style-type: none;
+}
+
+.movieItem {
+	background-color: gainsboro;
+	border: blue solid 3px;
+	margin: 10px;
+	width: 260px;
+	height: 100%;
+	float: left;
+}
+
+#movieDiv {
+	border: black solid 3px;
+}

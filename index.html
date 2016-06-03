@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app='movieSearchApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search App</title>
+  <!-- styles -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="/css/main.css" rel="stylesheet" media="screen">
+  <base href="/">
+</head>
+  <body ng-controller="mainController">
+    <div class="container" id='main'>
+      <div>
+
+        <h1>Movie Search</h1>
+        <br>
+
+        <!-- <form action="#" name='movieName' > -->
+        <!-- ng-submit='searchMovie()' -->
+			    <label for="movieName">Enter Movie Title:</label>
+			    <br>
+			    <input type="text" ng-model="movieName"></p>
+					<br>
+					<button ng-click='searchMovie()'>submit</button>
+				<!-- </form> -->
+      <!-- add content here -->
+      </div>
+			
+			<div ng-view></div>
+
+      <div>
+      	<ul id='movieList'>
+      		<li ng-repeat='movie in view.movieList' class='movieItem' ng-click='showMovie(movie)'>
+      			<a ng-href="/show/{{movie.imdbID}}" ><h3>{{movie.Title}}</h3></a>
+      			<h4>{{movie.Year}}</h4>
+      			<img ng-src='{{movie.Poster}}'>
+      		</li>
+      	</ul>
+      </div>
+			
+    </div>
+    <!-- scripts -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+    <script src="./js/controllers.js" type="text/javascript"></script>
+    <!-- <script src="./js/directives.js" type="text/javascript"></script> -->
+    <script src="./js/filters.js" type="text/javascript"></script>
+    <script src="./js/services.js" type="text/javascript"></script>
+  </body>
+</html>

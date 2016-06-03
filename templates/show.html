@@ -1,0 +1,15 @@
+<div id='movieDiv' style=' margin-top: 10px'>
+	<img src="{{view.movie.other.poster}}" style="float: left; width: 200px">
+	<h1>{{view.movie.other.title}}</h1>
+	<br>
+	<h3>Starring: {{view.movie.Actors}}</h3>
+	<br>
+	<p>{{view.movie.Plot}}</p>
+	<div style='text-align: center; clear: both;'>
+		<h3>Additional Details</h3>
+		<div ng-repeat='(key, value) in view.movie' ng-hide="key === 'other'">
+			<h4>{{key}}</h4>
+			<p>{{value}}</p>
+		</div>
+	</div>
+</div>
